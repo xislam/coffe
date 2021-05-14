@@ -1,10 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>Koffee</title>
 </head>
-<body>
 
+<body>
+    <section class="main-page">
+        <div class="container">
+            <div class="header-wrapper">
+                <header class="header">
+                    <div>
+                        <a href="index.html"> <img class="header__logo" src="img/logo.png" alt="logo" /></a>
+
+                    </div>
+                    
+                    <ul class="header__nav-bar">
+                        <li>
+                            <a class="header__link" href="index.html">HOME</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="#about-us">ABOUT US</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="menu.html">MENUS</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="events.html">EVENTS</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="contact.html">CONTACT US</a>
+                        </li>
+                    </ul>
+
+                    <button class="burger-menu-show"></button>
+                    <button class="burger-menu-hide hide"></button>
+
+                    <nav class="burger-menu" id="burgerMenu">
+                        <span class="pop-up-curtain"></span>
+                        <ul class="burger-menu__wrapper">
+                            <li class="burger-menu__item">
+                                <a class="burger-menu__link" href="#home">
+                                    HOME
+                                </a>
+                            </li>
+                            <li class="burger-menu__item">
+                                <a class="burger-menu__link" href="#services">
+                                    ABOUT US
+                                </a>
+                            </li>
+                            <li class="burger-menu__item">
+                                <a class="burger-menu__link" href="#">
+                                    MENUS
+                                </a>
+                            </li>
+                            <li class="burger-menu__item">
+                                <a class="burger-menu__link" href="#">
+                                    EVENTS
+                                </a>
+                            </li>
+                            <li class="burger-menu__item">
+                                <a class="burger-menu__link" href="#">
+                                    CONTACT US
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </nav>
+
+
+
+                </header>
+            </div>
+            <section class="main-inner">
+                <h1 class="main-inner__title">
+                    MOST FAMOUS <br> RESTAURANT
+                </h1>
+                <p class="main-inner__description">It is a long established fact that a reader <br>
+                    will be distracted by the readable content <br> of a page when
+                    looking at its layout.</p>
+                <div class="btns">
+                    <button class="main-inner__btn-reser">Reservation</button>
+                    <button class="main-inner__btn-call">Call</button>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section id="about-us" class="about-us">
+        <div class="container">
+            <div class="about-us__first-block">
+                <h1 class="about-us__title">About Us</h1>
+                <h3 class="about-us__second-title">WELCOME TO BLUE IGUANA</h3>
+                <p class="about-us__description">
+                    Thank you for choosing to dine with us! Here at Blue Iguana we are dedicated
+                    in providing our guests with a genuine, home-style, classic, and quality dining
+                    experience. Not only do we cherish each guest that walks through our door, we
+                    also dedicate ourselves to our community! The Blue Iguana team makes it a
+                    goal to participate in, and host a minimum of 26 charity and fundraising events
+                    annually. It is our pleasure to give back to and build our community up to its
+                    highest potential, and care for those in need to the best of our ability.
+                    This is our home, and the people of this community are our family.
+                </p>
+                <p class="about-us__second-description">
+                    If you know an organization, individual, or cause you believe would benefit from holding an event
+                    here at Blue Iguana, please ask for a manager, and we would be happy to help you organize and host
+                    your event for FREE!
+                    Blue Iguana Supports LOCAL!
+                </p>
+            </div>
+            <div class="about-us__second-block">
+                <img class="about-us__img" src="img/img-1.jpg" alt="1">
+                <img class="about-us__img" src="img/img-2.jpg" alt="1">
+                <img class="about-us__img" src="img/img-3.jpg" alt="1">
+            </div>
+        </div>
+        <div class="about">
+            k
+        </div>
+    </section>
+    <section class="slider">
+        <h1 class="slider__title">Novelty</h1>
+        <div class="poster-main" id="carousel" data-setting='{
+            "width":1100,
+            "height":500,
+            "posterWidth":600,
+            "posterHeight":500,
+            "scale":0.8,
+            "speed":900,
+            "autoPlay":true,
+            "delay":1000,
+            "verticalAlign":"middle"
+            }'>
+            <div class="poster-btn poster-prev-btn"></div>
+            <ul class="poster-list">
+                <li class="poster-item"><a href="#"><img src="../../Minobr/img/slide-4.png" alt="" width="80%" /></a>
+                </li>
+                <li class="poster-item"><a href="#"><img src="../../Minobr/img/slide-1.png" alt="" width="80%" /></a>
+                </li>
+                <li class="poster-item"><a href="#"><img src="../../Minobr/img/slide-3.png" alt="" width="80%" /></a>
+                </li>
+                <li class="poster-item"><a href="#"><img src="../../Minobr/img/slide-2.png" alt="" width="80%" /></a>
+                </li>
+
+
+            </ul>
+            <div class="poster-btn poster-next-btn"></div>
+        </div>
+    </section>
+    <section class="reservation">
+        <div class="container">
+            <div class="reser">
+                <h1 class="reser__title">15% Military Discount</h1>
+                <h2 class="reser__description">Simply ask & bring your military ID with you.</h2>
+                <button class="reser__btn">Reservation</button>
+            </div>
+        </div>
+    </section>
+    <section class="comments">
+        <div class="container">
+            <h1 class="comments__title">Reviews</h1>
+            <div class="cards">
+                <div class="comments__card first-card">
+                    <div class="comments__card-name">
+                        <h3 class="commments__card-title">Gary</h3>
+                    </div>
+                    <p class="comments__description">It is a long established fact that a reader will be distracted by
+                        the
+                        readable content of a page when
+                        looking at its layout.
+                    </p>
+                </div>
+                <div class="comments__card middle-card">
+                    <div class="comments__card-name">
+                        <h3 class="commments__card-title">Gary</h3>
+                    </div>
+                    <p class="comments__description">It is a long established fact that a reader will be distracted by
+                        the
+                        readable content of a page when
+                        looking at its layout.
+                    </p>
+                </div>
+                <div class="comments__card last-card">
+                    <div class="comments__card-name">
+                        <h3 class="commments__card-title">Gary</h3>
+                    </div>
+                    <p class="comments__description">It is a long established fact that a reader will be distracted by
+                        the
+                        readable content of a page when
+                        looking at its layout.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-block">
+        <img class="footer-logo" src="./img/footer-logo.png" alt="footer logo">
+        <div class="container">
+            <div class="footer__social-media">
+                <div>
+                    <a href=""><img class="soc-media" src="./img/facebook.png" alt=""></a>
+                    <a href=""><img class="soc-media" src="./img/insta.png" alt=""></a>
+                    <a href=""><img class="soc-media" src="./img/sova.png" alt=""></a>
+
+                </div>
+                <h3 class="footer__text">2021 © All Rights reserved The Blue Iguana</h3>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+    <script src="./js/jquery-1.9.1.min.js"></script>
+    <script src="./js/Carousel.js"></script>
+    <script src="./js/script.js"></script>
 </body>
+
 </html>
