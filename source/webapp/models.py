@@ -35,3 +35,5 @@ class Menu(models.Model):
 class AboutUs(models.Model):
     title = models.CharField(max_length=400, verbose_name='title')
     text = models.CharField()
+
+class
