@@ -1,3 +1,4 @@
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 
 # Create your models here.
@@ -34,7 +35,7 @@ class Menu(models.Model):
 
 class AboutUs(models.Model):
     title = models.CharField(max_length=400, verbose_name='title')
-    text = models.CharField()
+    text = RichTextUploadingField()
 
     def __str__(self):
         return self.title
@@ -60,13 +61,7 @@ class DailyEvents(models.Model):
         verbose_name_plural = 'Daily Events'
 
 
-class SportEvents(models.Model):
-    img = models.ImageField(upload_to='events', verbose_name='img')
-    title = models.CharField(max_length=400, verbose_name='title')
-    subtitle = models.CharField(max_length=1000, verbose_name='subtitle')
-    text = models.CharField(max_length=1000, verbose_name='text')
-    data = models.CharField(max_length=1000, verbose_name='text_data')
-    created_date = models.DateTimeField(auto_now_add=True, verbose_name='created date')
+class SportEvents(DailyEvents):
 
     def __str__(self):
         return self.title
@@ -91,6 +86,7 @@ class Slider(models.Model):
 
 class RESERVATIONS(models.Model):
     text = models.CharField(max_length=3000, verbose_name='text')
+    created_date = models.DateTimeField(auto_now_add=True, verbose_name='created date')
 
     def __str__(self):
         return self.text
@@ -101,7 +97,8 @@ class RESERVATIONS(models.Model):
 
 
 class OpenTime(models.Model):
-    time = models.CharField(max_length='300', verbose_name='open time')
+    time = models.CharField(max_length=300, verbose_name='open time')
+    created_date = models.DateTimeField(auto_now_add=True, verbose_name='created date')
 
     def __str__(self):
         return self.time
@@ -112,7 +109,8 @@ class OpenTime(models.Model):
 
 
 class OurLocation(models.Model):
-    text = models.CharField(max_length='300', verbose_name='Our Location')
+    text = models.CharField(max_length=300, verbose_name='Our Location')
+    created_date = models.DateTimeField(auto_now_add=True, verbose_name='created date')
 
     def __str__(self):
         return self.text
@@ -125,6 +123,7 @@ class OurLocation(models.Model):
 class TableReservation(models.Model):
     phone = models.CharField(max_length=300, verbose_name='phone')
     email = models.EmailField()
+    created_date = models.DateTimeField(auto_now_add=True, verbose_name='created date')
 
     def __str__(self):
         return self.phone

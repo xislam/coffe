@@ -1,0 +1,254 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/swiper-bundle.min.css" %}" />
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>Coffee</title>
+</head>
+
+<body>
+    <section class="main-page" id="home">
+        <div class="container">
+            <div class="header-wrapper">
+                <header class="header">
+                    <div>
+                        <a href="{% url 'webapp:index' %}"> <img class="header__logo" src="{% static "/img/logo.png" %}" alt="logo" /></a>
+
+                    </div>
+
+                    <ul class="header__nav-bar">
+                        <li>
+                            <a class="header__link home" href="{% url 'webapp:index' %}">HOME</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="#about-us">ABOUT US</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="{% url 'webapp:menu' %}">MENUS</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="{% url 'webapp:event' %}">EVENTS</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="{% url 'webapp:contact' %}">CONTACT US</a>
+                        </li>
+                    </ul>
+                </header>
+            </div>
+
+            <div class="mobile-nav-bar">
+                <div class="mobile-logo-wrapper">
+                    <a href="index.html"> <img class="mobile-header__logo" src="../static/img/logo.png" alt="logo" /></a>
+                </div>
+
+                <button class="burger-menu-show"></button>
+                <button class="burger-menu-hide hide"></button>
+
+                <nav class="burger-menu" id="burgerMenu">
+                    <span class="pop-up-curtain"></span>
+                    <ul class="burger-menu__wrapper">
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="{% url 'webapp:index' %}">
+                                HOME
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="#about-us">
+                                ABOUT US
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="{% url 'webapp:menu' %}">
+                                MENUS
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="{% url 'webapp:event' %}">
+                                EVENTS
+                            </a>
+                        </li>
+                        <li class="burger-menu__item">
+                            <a class="burger-menu__link" href="{% url 'webapp:contact' %}">
+                                CONTACT US
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+            <section class="main-inner">
+                <h1 class="main-inner__title">
+                    MOST FAMOUS <br> RESTAURANT
+                </h1>
+                <p class="main-inner__description">It is a long established fact that a reader
+                    will be distracted by the readable content of a page when
+                    looking at its layout.</p>
+                <div class="btns">
+                    <button class="main-inner__btn-reser"><a class="btn-link" href="contact.html">Reservation</a></button>
+                    <button class="main-inner__btn-call">Call</button>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="about-us" id="about-us">
+        <div class="container">
+            <div class="about-us__first-block">
+                <h1 class="about-us__title">About Us</h1>
+                <h3 class="about-us__second-title">WELCOME TO BLUE IGUANA</h3>
+                <p class="about-us__description">
+                    Thank you for choosing to dine with us! Here at Blue Iguana we are dedicated
+                    in providing our guests with a genuine, home-style, classic, and quality dining
+                    experience. Not only do we cherish each guest that walks through our door, we
+                    also dedicate ourselves to our community! The Blue Iguana team makes it a
+                    goal to participate in, and host a minimum of 26 charity and fundraising events
+                    annually. It is our pleasure to give back to and build our community up to its
+                    highest potential, and care for those in need to the best of our ability.
+                    This is our home, and the people of this community are our family.
+                </p>
+                <p class="about-us__description">
+                    If you know an organization, individual, or cause you believe would benefit from holding an event
+                    here at Blue Iguana, please ask for a manager, and we would be happy to help you organize and host
+                    your event for FREE!
+                    Blue Iguana Supports LOCAL!
+                </p>
+            </div>
+            <div class="about-us__second-block">
+                <img class="about-us__img" src="../static/img/img-1.jpg" alt="1">
+                <img class="about-us__img" src="../static/img/img-2.jpg" alt="1">
+                <img class="about-us__img" src="../static/img/img-3.jpg" alt="1">
+            </div>
+        </div>
+        <div class="about">
+            
+        </div>
+    </section>
+    <section class="slider">
+        <h1 class="slider__title">Novelty</h1>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img class="slider-images" src="../static/img/slide-1.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img class="slider-images" src="../static/img/slide-2.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img class="slider-images" src="../static/img/slide-3.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img class="slider-images" src="../static/img/slide-4.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img class="slider-images" src="../static/img/slide-1.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img class="slider-images" src="../static/img/slide-2.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img class="slider-images" src="../static/img/slide-3.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img class="slider-images" src="../static/img/slide-4.png" alt="">
+                    </a>
+                </div>
+            </div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <section class="reservation">
+        <div class="container">
+            <div class="reser">
+                <h1 class="reser__title">15% Military Discount</h1>
+                <h2 class="reser__description">Simply ask & bring your military ID with you.</h2>
+                <button class="reser__btn">Reservation</button>
+            </div>
+        </div>
+    </section>
+    <section class="comments">
+        <div class="container">
+            <h1 class="comments__title">Reviews</h1>
+            <div class="cards">
+                <div class="comments__card first-card">
+                    <div class="comments__card-name">
+                        <h3 class="commments__card-title">Kyle Van Vlack</h3>
+                        <img class="commments__card-stars" src="../static/img/stars.png" alt="">
+                    </div>
+                    <p class="comments__description">
+                        Very chill bar and restaurant! Nice outside area to enjoy a drink and/or food. Finding a low key
+                        place in Northern Virginia seems like a diamond in the rough.
+                    </p>
+                </div>
+                <div class="comments__card middle-card">
+                    <div class="comments__card-name">
+                        <h3 class="commments__card-title">Ekaterina Lobanova</h3>
+                        <img class="commments__card-stars" src="../static/img/stars.png" alt="">
+                    </div>
+                    <p class="comments__description">
+                        Stopped by for lunch with a group of friends. I absolutely loved the place: attentive service,
+                        modern design and of course delicious food. There were so many interesting options to choose
+                        from! I haven't tried any of the mixed drinks but I heard they tasted great as well!
+                    </p>
+                </div>
+                <div class="comments__card last-card">
+                    <div class="comments__card-name">
+                        <h3 class="commments__card-title">Ruby Lowe</h3>
+                        <img class="commments__card-stars" src="../static/img/stars.png" alt="">
+                    </div>
+                    <p class="comments__description">
+                        First time at Blue IGUANA, service was Tops, waiters were very efficient and friendly. Was there
+                        for a FHOG Officers meeting and we will be returning next month. Food was excellent and pricing
+                        were very good. Would suggest it to anyone.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-block">
+        <img class="footer-logo" src="../static/img/footer-logo.png" alt="footer logo">
+        <div class="container">
+            <div class="footer__social-media">
+                <div>
+                    <a href="https://www.facebook.com/BlueIguanaVA/"><img class="soc-media" src="{% static "img/facebook.png" %}" alt=""></a>
+                    <a href="https://www.instagram.com/blueiguanafairfax/"><img class="soc-media" src="{% static "img/insta.png" %}" alt=""></a>
+                    <a href="https://www.tripadvisor.com/Restaurant_Review-g57718-d465310-Reviews-Blue_Iguana-Fairfax_Virginia.html"><img class="soc-media" src="{% static "img/sova.png" %}" alt=""></a>
+                </div>
+                <h3 class="footer__text">2021 © All Rights reserved The Blue Iguana</h3>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="{% static "js/jquery-1.9.1.min.js" %}"></script>
+    <script src="{% static "js/swiper-bundle.min.js" %}"></script>
+    <script src="{% static "js/script.js" %}"></script>
+</body>
+
+</html>
