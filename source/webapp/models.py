@@ -1,4 +1,4 @@
-from ckeditor_uploader.fields import RichTextUploadingField
+from ckeditor.fields import RichTextField
 from django.db import models
 
 # Create your models here.
@@ -20,7 +20,6 @@ class Menu(models.Model):
                                         verbose_name='menu categories')
     img = models.ImageField(upload_to='categories', verbose_name='img')
     title = models.CharField(max_length=400, verbose_name='title')
-    subtitle = models.CharField(max_length=1000, verbose_name='subtitle')
     text = models.CharField(max_length=1000, verbose_name='text')
     price = models.IntegerField(verbose_name='price')
     created_date = models.DateTimeField(auto_now_add=True, verbose_name='created date')
@@ -35,7 +34,7 @@ class Menu(models.Model):
 
 class AboutUs(models.Model):
     title = models.CharField(max_length=400, verbose_name='title')
-    text = RichTextUploadingField()
+    text = RichTextField()
 
     def __str__(self):
         return self.title

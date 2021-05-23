@@ -13,7 +13,7 @@ class IndexListView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(IndexListView, self).get_context_data(**kwargs)
         context["sliders"] = Slider.objects.all()
-        context['about_us'] = AboutUs.objects.all()
+        context['about_us'] = AboutUs.objects.all().first()
 
         return context
 

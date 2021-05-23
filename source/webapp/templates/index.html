@@ -101,23 +101,8 @@
         <div class="container">
             <div class="about-us__first-block">
                 <h1 class="about-us__title">About Us</h1>
-                <h3 class="about-us__second-title">WELCOME TO BLUE IGUANA</h3>
-                <p class="about-us__description">
-                    Thank you for choosing to dine with us! Here at Blue Iguana we are dedicated
-                    in providing our guests with a genuine, home-style, classic, and quality dining
-                    experience. Not only do we cherish each guest that walks through our door, we
-                    also dedicate ourselves to our community! The Blue Iguana team makes it a
-                    goal to participate in, and host a minimum of 26 charity and fundraising events
-                    annually. It is our pleasure to give back to and build our community up to its
-                    highest potential, and care for those in need to the best of our ability.
-                    This is our home, and the people of this community are our family.
-                </p>
-                <p class="about-us__description">
-                    If you know an organization, individual, or cause you believe would benefit from holding an event
-                    here at Blue Iguana, please ask for a manager, and we would be happy to help you organize and host
-                    your event for FREE!
-                    Blue Iguana Supports LOCAL!
-                </p>
+                <h3 class="about-us__second-title">{{ about_us.title }}</h3>
+                {{ about_us.text|safe }}
             </div>
             <div class="about-us__second-block">
                 <img class="about-us__img" src="../static/img/img-1.jpg" alt="1">
@@ -136,48 +121,13 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
             <!-- Slides -->
-                <div class="swiper-slide">
+                {% for slider in sliders %}
+                    <div class="swiper-slide">
                     <a href="#">
-                        <img class="slider-images" src="../static/img/slide-1.png" alt="">
+                        <img class="slider-images" src="{{ slider.img.url }}" alt="">
                     </a>
                 </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img class="slider-images" src="../static/img/slide-2.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img class="slider-images" src="../static/img/slide-3.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img class="slider-images" src="../static/img/slide-4.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img class="slider-images" src="../static/img/slide-1.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img class="slider-images" src="../static/img/slide-2.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img class="slider-images" src="../static/img/slide-3.png" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img class="slider-images" src="../static/img/slide-4.png" alt="">
-                    </a>
-                </div>
-            </div>
-        
+            {% endfor %}
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
