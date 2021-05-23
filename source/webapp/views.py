@@ -25,7 +25,7 @@ class EventsList(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(EventsList, self).get_context_data(**kwargs)
-        context['dail_event'] = DailyEvents.objects.all()
+        context['daily_event'] = DailyEvents.objects.all()
         context['sport_events'] = SportEvents.objects.all()
         return context
 
@@ -37,10 +37,10 @@ class Contact(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(Contact, self).get_context_data(**kwargs)
-        context['our_location'] = OurLocation.objects.all()
-        context['open_time'] = OpenTime.objects.all()
-        context['reservations'] = RESERVATIONS.objects.all()
-        context['table_reservation'] = TableReservation.objects.all()
+        context['our_location'] = OurLocation.objects.all().first()
+        context['open_time'] = OpenTime.objects.all().first()
+        context['reservations'] = RESERVATIONS.objects.all().first()
+        context['table_reservation'] = TableReservation.objects.all().first()
         return context
 
 
@@ -56,6 +56,6 @@ class MenuList(ListView):
         if category:
             context["menu"] = Menu.objects.filter(menu_categories__name=category)
         else:
-            context["menu"] = Menu.objects.filter(menu_categories__name="")
+            context["menu"] = Menu.objects.filter(menu_categories__name="APPETIZERS")
         return context
 

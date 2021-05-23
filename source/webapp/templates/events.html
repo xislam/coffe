@@ -89,154 +89,37 @@
                 <h1 class="daily-title">Daily Events</h1>
                 <div class="event-cards">
                     <button id="hideEventModal"></button>
+                    {% for daily_event in daily_event %}
                     <div class="dailyCard-wrapper">
-                        <h3 class="dailyCard__days">Monday</h3>
+                        <h3 class="dailyCard__days">{{ daily_event.title }}</h3>
                         <div class="dailyCard__grey">
                             <div class="event-modal-img-curtain">
-                                <img class="dailyCard__img" src="../static/img/event-1.png" alt="">
+                                <img class="dailyCard__img" src="{{ daily_event.img.url }}" alt="">
                             </div>
-                            <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
-                            <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
-                                league.Free! Every
-                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday</p>
+                            <h3 class="dailyCard__title">{{ daily_event.subtitle }}</h3>
+                            <p class="dailyCard_discription">{{ daily_event.text }}</p>
                         </div>
-                        <p class="dailyCard_whishes">Happy Hour Drinks All Day till 8 pm</p>
+                        <p class="dailyCard_whishes">{{ daily_event.data }}</p>
                     </div>
-                    <div class="dailyCard-wrapper">
-                        <h3 class="dailyCard__days">Monday</h3>
-                        <div class="dailyCard__grey">
-                            <div class="event-modal-img-curtain">
-                                <img class="dailyCard__img" src="../static/img/event-1.png" alt="">
-                            </div>
-                            <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
-                            <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
-                                league.Free! Every
-                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday</p>
-                        </div>
-                        <p class="dailyCard_whishes">Happy Hour Drinks All Day till 8 pm</p>
-                    </div>
-                    <div class="dailyCard-wrapper">
-                        <h3 class="dailyCard__days">Monday</h3>
-                        <div class="dailyCard__grey">
-                            <div class="event-modal-img-curtain">
-                                <img class="dailyCard__img" src="../static/img/event-1.png" alt="">
-                            </div>
-                            <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
-                            <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday</p>
-                        </div>
-                        <p class="dailyCard_whishes">Happy Hour Drinks All Day till 8 pm</p>
-                    </div>
-                    <div class="dailyCard-wrapper">
-                        <h3 class="dailyCard__days">Monday</h3>
-                        <div class="dailyCard__grey">
-                            <div class="event-modal-img-curtain">
-                                <img class="dailyCard__img" src="../static/img/event-1.png" alt="">
-                            </div>
-                            <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
-                            <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
-                                league.Free! Ever
-                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday</p>
-                        </div>
-                        <p class="dailyCard_whishes">Happy Hour Drinks All Day till 8 pm</p>
-                    </div>
-                    <div class="dailyCard-wrapper">
-                        <h3 class="dailyCard__days">Monday</h3>
-                        <div class="dailyCard__grey">
-                            <div class="event-modal-img-curtain">
-                                <img class="dailyCard__img" src="../static/img/event-1.png" alt="">
-                            </div>
-                            <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
-                            <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                league.Free! Every
-                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday</p>
-                        </div>
-                        <p class="dailyCard_whishes">Happy Hour Drinks All Day till 8 pm</p>
-                    </div>
+                    {% endfor %}
+
                 </div>
 
             </div>
             <div class="sport">
                 <h1 class="sport-title">Sport Events</h1>
                 <div class="sport-cards">
+                    {% for sport_events in sport_events %}
                     <div class="dailyCard-wrapper">
                         <div class="dailyCard__grey">
                             <div class="event-modal-img-curtain">
-                                <img class="dailyCard__img" src="../static/img/event-1.png" alt="">
+                                <img class="dailyCard__img" src="{{ sport_events.img.url }}" alt="">
                             </div>
-                            <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
-                            <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
-                                league.Free! Every
-                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday
-                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday
-                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday
-                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday
-                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday
-                            </p>
+                            <h3 class="dailyCard__title">{{ sport_events.title }}</h3>
+                            <p class="dailyCard_discription">{{ sport_events.text }}</p>
                         </div>
                     </div>
-                    <div class="dailyCard-wrapper">
-                        <div class="dailyCard__grey">
-                            <div class="event-modal-img-curtain">
-                                <img class="dailyCard__img" src="../static/img/event-1.png" alt="">
-                            </div>
-                            <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
-                            <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
-                                league.Free! Every
-                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday</p>
-                        </div>
-                    </div>
-                    <div class="dailyCard-wrapper">
-                        <div class="dailyCard__grey">
-                            <div class="event-modal-img-curtain">
-                                <img class="dailyCard__img" src="../static/img/event-1.png" alt="">
-                            </div>
-                            <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
-                            <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
-                                league.Free! Every
-                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday</p>
-                        </div>
-                    </div>
-                    <div class="dailyCard-wrapper">
-                        <div class="dailyCard__grey">
-                            <div class="event-modal-img-curtain">
-                                <img class="dailyCard__img" src="../static/img/event-1.png" alt="">
-                            </div>
-                            <h3 class="dailyCard__title">MONDAY NIGHT POKER</h3>
-                            <p class="dailyCard_discription">World Tavern Poker, America’s number 1 bar poker
-                                league.Free! Every
-                                Monday at 7pm & 9:00pm NFL Monday Night Football. Acustic music every other Monday</p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

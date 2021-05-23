@@ -90,7 +90,7 @@
             <ul class="menu__list-wrapper">
                 {% for menu_categories in menu_categories %}
                     <li><a href="{% url 'webapp:category' category=menu_categories.name %}"
-                           class="menu__link">{{ menu_categories.name }}</a></li>
+                           class="menu__link" >{{ menu_categories.name }}</a></li>
                 {% endfor %}
             </ul>
         </div>

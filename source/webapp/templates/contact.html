@@ -94,13 +94,11 @@
                     <div class="contacts-firstBlock">
                         <h2 class="block-title">RESERVATIONS</h2>
                         <p class="firstBlock-description">
-                            Please contact us to book charity events, birthday parties, any events or simply to reserve
-                            a
-                            table for lunch or dinner.
+                           {{ reservations.text }}
                         </p>
                         <h2 class="block-title">We are open:</h2>
                         <p class="firstBlock-description">
-                            MONDAY-FRIDAY 11:30am - 2:00am SATURDAY 12:00pm - 2:00am SUNDAY 10:00am - 2:00am
+                            {{ open_time.time }}
                         </p>
                     </div>
 
@@ -110,18 +108,18 @@
                       
                             <h5 class="contact__phone">
                                 <img class="contact-icons" src="{% static "img/phone-icon.png" %}" alt="">
-                                +703-502-8108
+                                {{ table_reservation.phone }}
                             </h5>
                             <h5 class="contact__email">
                                 <img class="contact-icons" src="{% static "img/email-icon.png" %}" alt="">
-                                dining@theblueiguana.com
+                                {{ table_reservation.email }}
                             </h5>
                         </div>
                         <div>
                             <h2 class="block-title">Our location</h2>
                             <h5 class="contact__location">
                                 <img class="contact-icons"  src="{% static "/img/location-icon.png" %}" alt="">
-                                12727 Shoppes Lane Fairfax, VA 22033
+                                {{ our_location.text }}
                             </h5>
                         </div>
                     </div>

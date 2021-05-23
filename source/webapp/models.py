@@ -60,7 +60,11 @@ class DailyEvents(models.Model):
         verbose_name_plural = 'Daily Events'
 
 
-class SportEvents(DailyEvents):
+class SportEvents(models.Model):
+    img = models.ImageField(upload_to='events', verbose_name='img')
+    title = models.CharField(max_length=400, verbose_name='title')
+    text = models.CharField(max_length=1000, verbose_name='text')
+    created_date = models.DateTimeField(auto_now_add=True, verbose_name='created date')
 
     def __str__(self):
         return self.title
